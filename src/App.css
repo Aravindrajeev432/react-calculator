@@ -5,3 +5,53 @@
   background: antiquewhite;
 
 }
+.bigbox{
+  width:400px;
+  height:500px;
+  /* background:red; */
+}
+.calcbox{
+  width:100%;
+  height:350px;
+  /* background:green; */
+  bottom:0px;
+}
+.show-result
+{
+width:100%;
+height:150px;
+/* background:yellow; */
+
+
+}
+.button-chumma{
+width:90px;
+height:70px;
+margin-bottom: 17px;
+background: white;
+    border: 1px solid #adadad;
+    font-size: 22px;
+    font-family: fantasy;
+
+}
+.button-chumma:hover{
+  background: #efefef;
+
+}
+
+.equal-btn {
+  height: 70px;
+  width: 180px;
+  background: white;
+    border: 1px solid #adadad;
+}
+.button-chumma-result{
+  width:90px;
+  height:70px;
+  margin-bottom: 17px;
+  background: transparent;
+      border: 0px solid #adadad;
+      font-size: 22px;
+      font-family: fantasy;
+
+}
