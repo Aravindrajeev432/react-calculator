@@ -6,7 +6,6 @@ function App() {
       <div className="row">
         <div className="col-12 bg-warning fullpage"> 
           
-
         </div>
 
       </div>
