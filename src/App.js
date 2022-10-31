@@ -6,7 +6,7 @@ function App() {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12  fullpage d-flex justify-content-center align-items-center">
-                    <div className="bigbox">
+                    <div className="bigbox border border-3 border-dark">
          <Bigbox></Bigbox>
 
                     </div>
@@ -22,10 +22,33 @@ function App() {
 }
 
 function Bigbox(){
-  const [firstval, setFirstval]=useState('')
-  const [secondval, setSecondval] = useState('')
-  const [operator, setOperator]=useState('')
+  const [firstval, setFirstval]=useState('') // for first value
+  const [secondval, setSecondval] = useState('') // for second value
+  const [operator, setOperator] = useState('') //for operator
+  const [result , setResult] = useState(0) // for result
 
+  const Result = () => {
+    //  r = f o(+,-,*,/) s
+    var f= parseInt(firstval)
+    var s = parseInt(secondval)
+    var o = operator
+    if (o==="+"){
+      setResult(f+s)
+    }
+    else if (o==='-')
+    {
+      setResult(f-s)
+    }
+    else if (o==='*'){
+      setResult(f*s)
+    }
+    else if (o==='/'){
+      setResult(f/s)
+    }
+
+      
+
+  }
 
   const Setval= (props) =>{
     var val
@@ -55,10 +78,6 @@ function Bigbox(){
       setFirstval(firstval+props )
       }
     }
-
-
-
-
   }
 
   const ShowResult = () => {
@@ -76,7 +95,7 @@ function Bigbox(){
                       <input type="button" className="button-chumma-result"
                           value={secondval}></input>
                       <input type="button" className="button-chumma-result"
-                          value={"0"}></input>
+                          value={result}></input>
   
                   </div>
               </div>
@@ -161,7 +180,7 @@ function Bigbox(){
                   </div>
                   <div className="col-12 d-flex justify-content-evenly">
                       <input type="button" className="equal-btn"
-                          value={"="}></input>
+                          value={"="} onClick={Result()} ></input>
                       <input type="button" className="button-chumma"
                           value={"0"}
                           onClick={(e)=>
